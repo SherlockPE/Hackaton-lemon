@@ -1,0 +1,43 @@
+[package]
+name = "stylus-sdk"
+keywords = ["arbitrum", "ethereum", "stylus", "alloy"]
+description = "Rust smart contracts with Arbitrum Stylus"
+readme = "../README.md"
+
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+alloy-primitives.workspace = true
+alloy-sol-types.workspace = true
+cfg-if.workspace = true
+derivative.workspace = true
+hex = { workspace = true, default-features = false, features = ["alloc"] }
+keccak-const.workspace = true
+lazy_static.workspace = true
+
+# export-abi
+regex = { workspace = true, optional = true }
+
+# local deps
+mini-alloc = { workspace = true, optional = true }
+stylus-proc.workspace = true
+
+[dev-dependencies]
+paste.workspace = true
+sha3.workspace = true
+
+[package.metadata.docs.rs]
+features = ["default", "docs", "debug", "export-abi"]
+
+[features]
+default = ["mini-alloc"]
+export-abi = ["debug", "regex", "stylus-proc/export-abi", "alloy-primitives/tiny-keccak"]
+debug = []
+docs = []
+hostio = []
+mini-alloc = ["dep:mini-alloc"]
+reentrant = ["stylus-proc/reentrant"]
