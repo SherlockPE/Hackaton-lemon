@@ -19,7 +19,7 @@ ArbResult inline _return_success_bebi32(bebi32 const retval)
   return res;
 }
 
-ArbResult set_value(uint8_t *input, size_t len)
+ArbResult share_info(uint8_t *input, size_t len)
 {
 
   if (len != 32)
@@ -38,7 +38,7 @@ ArbResult set_value(uint8_t *input, size_t len)
   return _return_success_bebi32(input);
 }
 
-ArbResult get_value(uint8_t *input, size_t len)
+ArbResult read_info(uint8_t *input, size_t len)
 {
 
   uint8_t *slot_address = (uint8_t *)(STORAGE_SLOT__value + 0); // Get the slot address
@@ -52,11 +52,6 @@ ArbResult get_value(uint8_t *input, size_t len)
   return _return_success_bebi32(buf_out);
 }
 
-ArbResult saluda_al_mundo(uint8_t *input, size_t len)
-{
-  return _return_short_string(Success, "Hola, soy Aurora y ahora tengo");
-}
-
 int handler(size_t argc)
 {
   // Save the function calldata
@@ -65,12 +60,11 @@ int handler(size_t argc)
 
   // Define the registry array with registered functions
   FunctionRegistry registry[] = {
-      {to_function_selector("set_value(uint256)"), set_value},
-      {to_function_selector("get_value()"), get_value},
-      {to_function_selector("saludame()"), saluda_al_mundo},
+    {to_function_selector("push_record(uint256)"), share_info},
+    {to_function_selector("pull_record()"), read_info}
+      // {to_function_selector("saludame()"), saluda_al_mundo},
       // Add more functions as needed here
   };
-
   uint32_t signature = *((uint32_t *)argv); // Parse function selector
 
   // Call the function based on the signature

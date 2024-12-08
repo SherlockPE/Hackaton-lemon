@@ -1,0 +1,10 @@
+e: 784 B
+wasm data fee: 0.000045 ETH
+deployed code at address: 0x02a0060d830a435764956e5a0d9139aa005ff970
+deployment tx hash: 0x4218d23c1998d47aa470288f8b2b1811f01e9a28d9ce088e345303c3ca8a2693
+contract activated and ready onchain with tx hash: 0xbf003d6c2198fb2f879481ef43a86d9e47f3003a4cdd6d6d7231260eadeb2e59
+
+NOTE: We recommend running cargo stylus cache bid 02a0060d830a435764956e5a0d9139aa005ff970 0 to cache your activated contract in ArbOS.
+Cached contracts benefit from cheaper calls. To read more about the Stylus contract cache, see
+https://docs.arbitrum.io/stylus/concepts/stylus-cache-manager
+➜  Hackaton-lemon git:(main) ✗ 
