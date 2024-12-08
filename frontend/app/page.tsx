@@ -4,10 +4,11 @@ import { useRkAccountModal } from "@/lib/rainbowkit";
 import { useAccount, useReadContract } from "wagmi";
 import { parseAbi } from "viem";
 import Get_input from "./form/Get_Input";
-import Index from "./principal/Index";
 import Send from "./input/input";
+import Index from "./principal/Index";
 import Navigation from "./Navigation";
 import About_us from "./about_us/about_us";
+import BoxForm from "./form/box_form";
 
 const ADDRESS = "0x9bd5ffc78ac793f243777f00a1f3990562269fc0";
 
@@ -31,6 +32,7 @@ export default function Home() {
       {<Navigation />}
       {<Index />}
       {/* {<About_us />} */}
+      {/* {<BoxForm />} */}
     </>
   );
 }

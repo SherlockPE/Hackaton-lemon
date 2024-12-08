@@ -1,5 +1,5 @@
 import React from "react";
-export default function box_form() {
+export default function BoxForm() {
   return (
       <div className="flex items-center justify-center h-screen bg-slate-500">
         <div className="w-96 h-[500px] bg-white rounded-lg shadow-lg p-8">
