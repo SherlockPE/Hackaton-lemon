@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { read, write } from "../../playground/index";
+import { read, write } from "../../../playground/index";
 import { useWriteContract } from "wagmi";
 import { parseAbi } from "viem";
 

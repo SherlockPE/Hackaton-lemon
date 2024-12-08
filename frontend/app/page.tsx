@@ -3,8 +3,8 @@
 import { useRkAccountModal } from "@/lib/rainbowkit"
 import { useAccount, useReadContract } from "wagmi"
 import { parseAbi } from "viem"
-import Get_input from "./input"
-import Index from "./Index"
+import Get_input from "./form/Get_Input"
+import Index from "./principal/Index"
 import Send from "./input/input"
 import Navigation from "./Navigation"
 
@@ -27,8 +27,9 @@ export default function Home() {
   console.debug({result})
   
   const { openAccountModal } = useRkAccountModal()
-  const { isConnected } = useAccount()
+  const account = useAccount()
 
+  console.log(account)
   return (
 
     <>
@@ -37,8 +38,11 @@ export default function Home() {
       {<Navigation/>}
       {/* {<Send />} */}
       {/* {<ConnectButton />} */}
+
+
+
       {<Get_input />}
-      
+
     </>
 
 
