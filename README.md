@@ -1,6 +1,7 @@
+# MedRecords
 # Historial Clínico Descentralizado
 
-**Queremos guardar el historial clínico de una persona para que este sea accesible a través de todo el mundo de forma descentralizada al viajar.**  
+MedRecords es una plataforma web basada en tecnología blockchain que permite a las personas conectar su identidad con su historial clínico. Con MedRecords, la información médica estará disponible de manera segura y accesible en cualquier parte del mundo, especialmente útil en casos de emergencia o al viajar.
 
 Este repositorio contiene un proyecto diseñado para revolucionar la forma en que los historiales médicos son almacenados y compartidos. Basándonos en tecnologías modernas como WebAssembly (Wasm) y redes descentralizadas, buscamos garantizar la disponibilidad, seguridad y privacidad de los datos clínicos sin depender de servidores centralizados.  
 
@@ -8,11 +9,11 @@ Este repositorio contiene un proyecto diseñado para revolucionar la forma en qu
 
 ## 🚀 Objetivo del Proyecto
 
-Crear un sistema que permita a los pacientes:  
-1. **Acceder a su historial médico en cualquier lugar del mundo** mediante una red descentralizada.  
-2. **Garantizar la privacidad de sus datos** con tecnologías de encriptación avanzada.  
-3. **Facilitar la colaboración médica internacional**, asegurando que los profesionales de la salud tengan acceso rápido y seguro a la información crítica.
+MedRecords está diseñado para transformar la forma en que los historiales médicos son almacenados y compartidos. Nuestro objetivo es:
 
+- **Acceso global:** Permitir a los usuarios consultar su historial médico en cualquier lugar del mundo, eliminando barreras geográficas.
+- **Privacidad y seguridad:** Garantizar la protección de datos con tecnologías avanzadas de encriptación y un enfoque descentralizado.
+- **Colaboración médica:** Facilitar el acceso rápido y seguro a información crítica para profesionales de la salud, mejorando diagnósticos y tratamientos en tiempo real.
 ---
 
 ## 🛠️ Tecnologías Utilizadas
