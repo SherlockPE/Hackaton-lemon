@@ -5,7 +5,7 @@ import "dotenv/config"
 
 // APLICATION BINARY INTERFACE
 const ABI = parseAbi([
-  "function push_record(uint256) public",
+  "function push_record(string) public",
   "function pull_record() public view returns (uint256)"
 ])
 

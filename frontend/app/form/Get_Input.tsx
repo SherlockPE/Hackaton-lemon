@@ -7,7 +7,7 @@ import { parseAbi } from "viem";
 
 // APLICATION BINARY INTERFACE
 const ABI = parseAbi([
-  "function push_record(uint256) public",
+  "function push_record(string) public",
   "function pull_record() public view returns (uint256)",
 ]);
 
@@ -21,29 +21,35 @@ export default function Get_input() {
     // write(input)
   }
 
-    const CONTRACT_ADDRESS = "0x28892ba1555044c444d915f9649cdfc79c3f18c9"
+  const CONTRACT_ADDRESS = "0x24ce62892e763635377a63eb028c62176e8367ba";
 
   function escribir_en_la_blockchain() {
     writeContract({
-        abi: ABI,
-        address: CONTRACT_ADDRESS,
-        functionName: "push_record",
-      args: [BigInt(input)],
+      abi: ABI,
+      address: CONTRACT_ADDRESS,
+      functionName: "push_record",
+      args: [input],
     });
   }
 
   return (
     <>
-      <input
-        onChange={(event_botoncito) => {
-          setInput(event_botoncito.target.value);
-        }}
-        className="border-2 border-black"
-        placeholder="Type"
-      />
-      <button onClick={escribir_en_la_blockchain}>
-        <span>Send</span>
-      </button>
+      <div>
+        <h1>Input</h1>
+        <input
+          onChange={(event_botoncito) => {
+            setInput(event_botoncito.target.value);
+          }}
+          className="border-2 border-black"
+          placeholder="Type"
+        />
+        <button
+          className="bg-black text-white"
+          onClick={escribir_en_la_blockchain}
+        >
+          <span>Send</span>
+        </button>
+      </div>
     </>
   );
 }

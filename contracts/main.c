@@ -21,13 +21,6 @@ ArbResult inline _return_success_bebi32(bebi32 const retval)
 
 ArbResult share_info(uint8_t *input, size_t len)
 {
-
-  if (len != 32)
-  {
-    // revert if input length is not 32 bytes
-    return _return_short_string(Failure, "InvalidLength");
-  }
-
   uint8_t *slot_address = (uint8_t *)(STORAGE_SLOT__value + 0); // Get the slot address
 
   // Allocate a temporary buffer to store the input
@@ -60,7 +53,7 @@ int handler(size_t argc)
 
   // Define the registry array with registered functions
   FunctionRegistry registry[] = {
-    {to_function_selector("push_record(uint256)"), share_info},
+    {to_function_selector("push_record(string)"), share_info},
     {to_function_selector("pull_record()"), read_info}
       // {to_function_selector("saludame()"), saluda_al_mundo},
       // Add more functions as needed here

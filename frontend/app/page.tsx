@@ -24,12 +24,12 @@ export default function Home() {
     }
   )
 
-  console.debug({result})
+  // console.debug({result})
   
   const { openAccountModal } = useRkAccountModal()
   const account = useAccount()
 
-  console.log(account)
+  // console.log(account)
   return (
 
     <>
