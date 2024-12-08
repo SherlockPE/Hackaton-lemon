@@ -33,7 +33,13 @@ export default function Home() {
   return (
     <>
       {<Navigation/>}
-      {<About_us />}
+      {/* {<Send />} */}
+      {/* {<ConnectButton />} */}
+
+
+
+      {<Get_input />}
+
     </>
   )
 }
