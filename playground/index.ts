@@ -23,20 +23,20 @@ const publicClient = createPublicClient({
 })
 
 // https://sepolia.arbiscan.io/address/const CONTRACT_ADDRESS = "0x46be8751225be83d7a9b97fec0214c53795d8477"
-const CONTRACT_ADDRESS = "0xf78840debc2db78991db15735e0d9f3a025bd03a"
+const CONTRACT_ADDRESS = "0x28892ba1555044c444d915f9649cdfc79c3f18c9"
 
-async function write() {
+export async function write() {
   const result = await client.writeContract({
     abi: ABI,
     address: CONTRACT_ADDRESS,
     functionName: "push_record",
-    args: [BigInt(42)],
+    args: [BigInt(12)],
   })
 
   console.debug(`Contract: ${result}`)
 }
 
-async function read() {
+export async function read() {
   const result = await publicClient.readContract({
     abi: ABI,
     address: CONTRACT_ADDRESS,

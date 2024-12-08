@@ -10,7 +10,7 @@ export default function ConnectButton() {
   return (
     <Button onClick={openAccountModal}>
       {isConnected && <span className="size-2 bg-green-400 rounded-full" />}{" "}
-      {address ? `Connected (${beautifyAddress(address)})` : "Connect Wallet"}
+      {address ? `Connected (${beautifyAddress(address)})` : "Sign in"}
     </Button>
   )
 }

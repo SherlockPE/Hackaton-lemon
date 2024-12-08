@@ -1,11 +1,12 @@
 "use client"
 
-import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs"
 import { useRkAccountModal } from "@/lib/rainbowkit"
 import { useAccount, useReadContract } from "wagmi"
-import Navigation from "./Navigation"
 import { parseAbi } from "viem"
 import Get_input from "./input"
+import Index from "./Index"
+import Send from "./input/input"
+import Navigation from "./Navigation"
 
 const ADDRESS = "0x9bd5ffc78ac793f243777f00a1f3990562269fc0"
 
@@ -14,7 +15,7 @@ const ABI = parseAbi([
 ])
 
 
-export default function Container() {
+export default function Home() {
   const result = useReadContract(
     {
       address: ADDRESS,
@@ -31,9 +32,13 @@ export default function Container() {
   return (
 
     <>
-      <Navigation />
 
-      <Get_input />
+      {/* {{<Index />} */}
+      {<Navigation/>}
+      {/* {<Send />} */}
+      {/* {<ConnectButton />} */}
+      {<Get_input />}
+      
     </>
 
 
