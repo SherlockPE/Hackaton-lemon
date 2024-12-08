@@ -33,15 +33,9 @@ export default function Home() {
   return (
 
     <>
-
-      {/* {{<Index />} */}
       {<Navigation/>}
-      {/* {<Send />} */}
-      {/* {<ConnectButton />} */}
-
-
-
-      {<Get_input />}
+      {<Index />} 
+    
 
     </>
 
