@@ -1,41 +1,36 @@
-"use client"
+"use client";
 
-import { useRkAccountModal } from "@/lib/rainbowkit"
-import { useAccount, useReadContract } from "wagmi"
-import { parseAbi } from "viem"
-import Get_input from "./form/Get_Input"
-import Index from "./principal/Index"
-import Send from "./input/input"
-import Navigation from "./Navigation"
-import About_us from "./about_us/about_us"
+import { useRkAccountModal } from "@/lib/rainbowkit";
+import { useAccount, useReadContract } from "wagmi";
+import { parseAbi } from "viem";
+import Get_input from "./form/Get_Input";
+import Index from "./principal/Index";
+import Send from "./input/input";
+import Navigation from "./Navigation";
+import About_us from "./about_us/about_us";
 
-const ADDRESS = "0x9bd5ffc78ac793f243777f00a1f3990562269fc0"
+const ADDRESS = "0x9bd5ffc78ac793f243777f00a1f3990562269fc0";
 
-const ABI = parseAbi([
-  "function saludame() public view returns (string)",
-])
-
+const ABI = parseAbi(["function saludame() public view returns (string)"]);
 
 export default function Home() {
-  const result = useReadContract(
-    {
-      address: ADDRESS,
-      functionName: "saludame",
-      abi: ABI
-    }
-  )
+  const result = useReadContract({
+    address: ADDRESS,
+    functionName: "saludame",
+    abi: ABI,
+  });
 
-  console.debug({result})
-  
-  const { openAccountModal } = useRkAccountModal()
-  const account = useAccount()
+  console.debug({ result });
 
-  console.log(account)
+  const { openAccountModal } = useRkAccountModal();
+  const account = useAccount();
+
+  console.log(account);
   return (
-
     <>
-      {<Navigation/>}
-      {<Index />} 
+      {<Navigation />}
+      {<Index />}
+      {/* {<About_us />} */}
     </>
-  )
+  );
 }
