@@ -5,7 +5,7 @@ import ConnectButton from "./ConnectButton"; // Importamos el botón
 
 export default function Navigation() {
   return (
-    <nav className="flex w-full justify-between gap-4 items-center h-16 p-4 bg-grey-700 backdrop-blur-sm">
+    <nav className="flex w-full justify-between gap-4 items-center h-16 p-4 bg-white backdrop-blur-sm">
       {/* Barra de navegación */}
       <h1 className="text-lg font-light tracking-wide text-black">MedRecord</h1>
 
