@@ -1,0 +1,20 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "scripts": {
+    "play": "npx tsx playground/index.ts",
+    "frontend": "cd frontend && npm run dev",
+    "postinstall": "cd frontend && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pino-pretty": "^13.0.0",
+    "viem": "^2.21.54"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "dotenv": "^16.4.7"
+  }
+}

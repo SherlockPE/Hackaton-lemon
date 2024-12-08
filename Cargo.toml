@@ -1,0 +1,15 @@
+[package]
+name = "stylus-starter-c"
+version = "0.1.5"
+edition = "2021"
+
+[lib]
+path = "./entry.rs"
+
+[profile.release]
+codegen-units = 1
+strip = true
+lto = true
+panic = "abort"
+opt-level = "s"
+
