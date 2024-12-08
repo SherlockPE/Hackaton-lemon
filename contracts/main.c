@@ -37,10 +37,6 @@ ArbResult read_info(uint8_t *input, size_t len)
   uint8_t *slot_address = (uint8_t *)(STORAGE_SLOT__value + 0); // Get the slot address
 
   storage_load_bytes32(slot_address, buf_out);
-  if (bebi32_is_zero(buf_out))
-  {
-    return _return_short_string(Failure, "NotSet");
-  }
 
   return _return_success_bebi32(buf_out);
 }
@@ -53,7 +49,7 @@ int handler(size_t argc)
 
   // Define the registry array with registered functions
   FunctionRegistry registry[] = {
-    {to_function_selector("push_record(string)"), share_info},
+    {to_function_selector("push_record(bytes32)"), share_info},
     {to_function_selector("pull_record()"), read_info}
       // {to_function_selector("saludame()"), saluda_al_mundo},
       // Add more functions as needed here

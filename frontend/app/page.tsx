@@ -7,6 +7,7 @@ import Get_input from "./form/Get_Input"
 import Index from "./principal/Index"
 import Send from "./input/input"
 import Navigation from "./Navigation"
+import Pull_blockchain from "./form/Pull_blockchain"
 
 const ADDRESS = "0x9bd5ffc78ac793f243777f00a1f3990562269fc0"
 
@@ -42,6 +43,7 @@ export default function Home() {
 
 
       {<Get_input />}
+      {<Pull_blockchain />}
 
     </>
 
