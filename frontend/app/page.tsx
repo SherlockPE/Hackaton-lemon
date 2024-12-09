@@ -21,12 +21,12 @@ export default function Home() {
     abi: ABI,
   });
 
-  console.debug({ result });
+  // console.debug({result})
+  
+  const { openAccountModal } = useRkAccountModal()
+  const account = useAccount()
 
-  const { openAccountModal } = useRkAccountModal();
-  const account = useAccount();
-
-  console.log(account);
+  // console.log(account)
   return (
     <>
       {<Navigation />}

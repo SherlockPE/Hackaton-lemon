@@ -1,49 +1,49 @@
 "use client";
 
 import { useState } from "react";
-import { read, write } from "../../../playground/index";
 import { useWriteContract } from "wagmi";
-import { parseAbi } from "viem";
+import { parseAbi, size, stringToHex } from "viem";
 
 // APLICATION BINARY INTERFACE
 const ABI = parseAbi([
-  "function push_record(uint256) public",
-  "function pull_record() public view returns (uint256)",
+  "function push_record(bytes32) public",
+  "function pull_record() view returns (bytes32)",
 ]);
 
 export default function Get_input() {
   const { writeContract } = useWriteContract();
   const [input, setInput] = useState("");
 
-  function Event_listener() {
-    console.log("Input: ");
-    console.log(input);
-    // write(input)
-  }
 
-    const CONTRACT_ADDRESS = "0x28892ba1555044c444d915f9649cdfc79c3f18c9"
+  const CONTRACT_ADDRESS = "0x789f1ab5265db940a75d8b41caf83d8a161e3ebc";
 
   function escribir_en_la_blockchain() {
     writeContract({
-        abi: ABI,
-        address: CONTRACT_ADDRESS,
-        functionName: "push_record",
-      args: [BigInt(input)],
+      abi: ABI,
+      address: CONTRACT_ADDRESS,
+      functionName: "push_record",
+      args: [stringToHex(input, {size:32})],
     });
   }
 
   return (
     <>
-      <input
-        onChange={(event_botoncito) => {
-          setInput(event_botoncito.target.value);
-        }}
-        className="border-2 border-black"
-        placeholder="Type"
-      />
-      <button onClick={escribir_en_la_blockchain}>
-        <span>Send</span>
-      </button>
+      <div>
+        <h1>Input</h1>
+        <input
+          onChange={(event_botoncito) => {
+            setInput(event_botoncito.target.value);
+          }}
+          className="border-2 border-black"
+          placeholder="Type"
+        />
+        <button
+          className="bg-black text-white"
+          onClick={escribir_en_la_blockchain}
+        >
+          <span>Send</span>
+        </button>
+      </div>
     </>
   );
 }
