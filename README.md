@@ -1,10 +1,10 @@
 # Med-Records 
-# Historial Clínico Descentralizado
+# Historial Clínico Descentralizado 📌
 
 MedRecords es una plataforma web basada en tecnología blockchain que permite a las personas conectar su identidad con su historial clínico. Con Med-Records, la información médica estará disponible de manera segura y accesible en cualquier parte del mundo, especialmente útil en casos de emergencia o al viajar.
 
 
-### Puedes visualizar nuestra página a través de este [enlace]()
+# Puedes visualizar nuestra página a través de este [enlace](https://medrecords.vercel.app/)
 
 ---
 
@@ -70,16 +70,17 @@ compatibles con contratos inteligentes.
 
 - **Logros:**
   - Integración del frontend con los contratos inteligentes.
+    ![result](img/Metamask-connect.png)
+    ![contratos](img/contrato2.png)
   - Integración del frontend con los contratos inteligentes.
   - Aprendizaje de cómo funcionan los smart contracts y la blockchain.
 
 ### Fase 4: Despliegue y Documentación
-- **Objetivo:** Desplegar el proyecto en un hosting como Vercel.
+- **Objetivo:** Desplegar el proyecto en un hosting como Vercel.<br/>
+    ![Desplegando el Proyecto](img/velcetprueba.png)
 - **Logros:**
   - Creación de documentación para usuarios y desarrolladores.
-  - Foto del equipo desplegando el proyecto:
-    ![Desplegando el Proyecto](ruta/a/la/foto6.jpg)
-  - Foto del equipo creando documentación:
-    ![Creando Documentación](ruta/a/la/foto7.jpg)
+  - Foto del equipo:
+    ![Equipo foto](img/Equipo.jpg)
 ---
 
