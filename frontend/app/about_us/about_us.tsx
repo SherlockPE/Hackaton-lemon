@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Users, Lightbulb, Target } from 'lucide-react';
+import { ChevronRight, Lightbulb, Target } from 'lucide-react';
 
 import OliverImage from '@/assets/Oliver.jpg';
 import JohiImage from '@/assets/Johi.jpg';
