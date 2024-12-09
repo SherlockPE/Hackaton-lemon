@@ -9,6 +9,7 @@ import Index from "./principal/Index";
 import About_us from "./about_us/about_us";
 import { BoxForm } from "./form/box_form";
 import Get_input from "./form/Get_Input";
+import Footer from "./Footer";
 
 export default function Home() {
   const { openAccountModal } = useRkAccountModal();
@@ -33,6 +34,7 @@ export default function Home() {
           <Route path="/form" element={<><BoxForm /></>}/>
           <Route path="/form/input" element={ <> <Get_input /></>}/>
         </Routes>
+		<Footer />
       </Router>
     </>
   );
