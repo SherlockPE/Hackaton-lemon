@@ -23,7 +23,7 @@ export default function Index() {
       <div
         className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center relative group"
         style={{
-          backgroundImage: 'url("/tu-segunda-imagen.jpg")',
+          backgroundImage: 'url("URL_DE_TU_IMAGEN_2")', // Reemplaza con la URL de tu segunda imagen
         }}
       >
         <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-40 transition-all duration-500"></div>
@@ -31,21 +31,22 @@ export default function Index() {
           "Conéctate con tu historial clínico en cualquier lugar"
         </h2>
 
-       {/* Contenedor de los botones */}
-<div className="flex space-x-20 mt-12 animate-fade-in">
-  <button
-    onClick={() => (window.location.href = "/check-history")}
-    className="px-6 py-2 bg-emerald-500 text-white font-bold rounded-lg transition-all duration-300 hover:bg-emerald-400 hover:text-black hover:scale-110 hover:shadow-2xl active:scale-105 focus:outline-none"
-  >
-    Historial clínico
-  </button>
-  <button
-    onClick={() => (window.location.href = "/rellena-tus-datos")}
-    className="px-6 py-2 bg-emerald-500 text-white font-bold rounded-lg transition-all duration-300 hover:bg-emerald-400 hover:text-black hover:scale-110 hover:shadow-2xl active:scale-105 focus:outline-none"
-  >
-    Regístrate
-  </button>
-</div>
+        {/* Contenedor de los botones */}
+        <div className="flex space-x-20 mt-12 animate-fade-in">
+        <button
+  onClick={() => (window.location.href = "/check-history")}
+  className="px-6 py-2 bg-emerald-500 text-white font-bold rounded-lg transition-all duration-300 transform hover:bg-emerald-400 hover:text-black hover:scale-110 hover:shadow-2xl active:scale-105 focus:outline-none"
+>
+  Historial clínico
+</button>
+
+<button
+  onClick={() => (window.location.href = "/rellena-tus-datos")}
+  className="px-6 py-2 bg-emerald-500 text-white font-bold rounded-lg transition-all duration-300 transform hover:bg-emerald-400 hover:text-black hover:scale-110 hover:shadow-2xl active:scale-105 focus:outline-none"
+>
+  Regístrate
+</button>
+        </div>
       </div>
 
       {/* Tercera imagen */}
