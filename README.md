@@ -78,9 +78,46 @@ compatibles con contratos inteligentes.
 ### Fase 4: Despliegue y Documentación
 - **Objetivo:** Desplegar el proyecto en un hosting como Vercel.<br/>
     ![Desplegando el Proyecto](img/velcetprueba.png)
+    ![Desplegando el Proyecto](img/page.png)
 - **Logros:**
   - Creación de documentación para usuarios y desarrolladores.
   - Foto del equipo:
     ![Equipo foto](img/Equipo.jpg)
 ---
+
+
+## 🛠️ Cómo Editar el Código y Ver los Cambios en Tiempo Real
+
+Para editar el código y ver los cambios en tiempo real en un servidor local, sigue estos pasos:
+
+### 1. Clonar el Repositorio
+
+Primero, clona el repositorio en tu máquina local:
+
+```bash
+git clone https://github.com/SherlockPE/Hackaton-lemon.git 
+
+cd Hackaton-lemon
+```
+
+
+2. Instalar Dependencias
+Asegúrate de tener Node.js y npm instalados en tu máquina. Luego, instala las dependencias del proyecto:
+```bash
+npm install
+```
+
+3. Ejecutar el Servidor de Desarrollo
+Para ejecutar el servidor de desarrollo y ver los cambios en tiempo real, utiliza el siguiente comando:
+
+```bash
+make frontend
+```
+
+Esto iniciará el servidor de desarrollo de Next.js. Abre tu navegador y navega a [localhost:3000](http://localhost:3000) para ver la aplicación en funcionamiento.
+
+4. Para editar el Código
+Puedes editar los archivos en la carpeta frontend y ver los cambios reflejados en tiempo real en tu navegador. Next.js se encargará de recargar automáticamente la página cuando detecte cambios en los archivos.
+
+![Carpeta de la pagina](img/tree.png)
 
