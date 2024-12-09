@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navigation from "./Navigation";
 import Index from "./principal/Index";
 import About_us from "./about_us/about_us";
-import BoxForm from "./form/box_form";
+import { BoxForm } from "./form/box_form";
 import Get_input from "./form/Get_Input";
 import Pull_blockchain from "./form/Pull_blockchain";
 
