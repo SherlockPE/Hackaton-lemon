@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRkAccountModal } from "@/lib/rainbowkit";
-import { useAccount, useReadContract } from "wagmi";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./Navigation";
 import Index from "./principal/Index";
 import About_us from "./about_us/about_us";
@@ -11,8 +9,8 @@ import { BoxForm } from "./form/box_form";
 import Get_input from "./form/Get_Input";
 
 export default function Home() {
-  const { openAccountModal } = useRkAccountModal();
-  const account = useAccount();
+  // const { openAccountModal } = useRkAccountModal();
+  // const account = useAccount();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
