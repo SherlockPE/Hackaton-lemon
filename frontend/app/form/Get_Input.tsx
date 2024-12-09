@@ -14,14 +14,14 @@ const CONTRACT_ADDRESS = "0x789f1ab5265db940a75d8b41caf83d8a161e3ebc";
 
 export default function Get_input() {
   const { writeContract } = useWriteContract();
-  const [formData, setFormData] = useState({
-    name: "",
-    age: "",
-    gender: "",
-    bloodType: "",
-    medications: "",
-    allergies: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   age: "",
+  //   gender: "",
+  //   bloodType: "",
+  //   medications: "",
+  //   allergies: "",
+  // });
   const [input, setInput] = useState("");
 
   //   const handleChange = (

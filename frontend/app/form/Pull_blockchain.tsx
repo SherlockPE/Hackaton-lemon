@@ -2,8 +2,8 @@
 
 import { useReadContract } from "wagmi";
 import { hexToString, parseAbi } from "viem";
-import { Result } from "postcss";
-import { read } from "fs";
+// import { Result } from "postcss";
+// import { read } from "fs";
 
 // APLICATION BINARY INTERFACE
 const ABI = parseAbi([
