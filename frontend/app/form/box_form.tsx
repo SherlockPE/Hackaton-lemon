@@ -4,12 +4,14 @@ import cardHeaderImage from "@/assets/abstract-blur-empty-green-gradient-studio-
 import profilePic from "@/assets/33e4425f-3a3f-466d-93d2-78b807429841.jpg";
 import { BsCapsulePill } from "react-icons/bs";
 import { FaFileWaveform } from "react-icons/fa6";
+import { FaHeadSideCough } from "react-icons/fa";
 import Pull_blockchain from "./Pull_blockchain";
+import { Button } from "@/components/ui/button";
 
 export const BoxForm = () => {
   const healthData = [
     {
-      followers: "TODO",
+      icon: <FaHeadSideCough />,
       name: "Alergias",
     },
     {
@@ -39,23 +41,29 @@ export const BoxForm = () => {
           />
         </div>
         <div className="flex flex-col justify-center items-center font-extrabold text-2xl">
-          <div className="gap-4">
-            <Pull_blockchain /> <span className="font-light text-gray-400">A+</span>
+          <div className="flex items-center gap-2">
+            <Pull_blockchain />{" "}
+            <span className="font-light text-gray-400">A+</span>
           </div>
           <div className="text-base font-normal text-gray-400 track mt-2">
             01/01/1982
           </div>
         </div>
 
-        <hr className="bg-black my-6" />
+         <hr className="bg-black my-6" />
         <div className="flex justify-around text-center pb-20">
           {healthData.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="font-extrabold text-xl  ">{item.icon}</div>
-              <div className="font-light text-sm text-gray-400  tracking-widest	">
+            <Button
+              key={index}
+              variant="ghost"
+              className="flex flex-col items-center gap-2 hover:bg-gray-100"
+              onClick={() => console.log(`Clicked on ${item.name}`)}
+            >
+              <div className="text-xl">{item.icon}</div>
+              <div className="font-light text-sm text-gray-400 tracking-widest">
                 {item.name}
               </div>
-            </div>
+            </Button>
           ))}
         </div>
       </div>
