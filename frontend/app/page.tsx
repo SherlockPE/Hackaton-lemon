@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRkAccountModal } from "@/lib/rainbowkit";
 import { useAccount, useReadContract } from "wagmi";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -13,8 +14,16 @@ import Pull_blockchain from "./form/Pull_blockchain";
 export default function Home() {
   const { openAccountModal } = useRkAccountModal();
   const account = useAccount();
-  // console.debug({result})
-  // console.log(account)
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // O un componente de carga
+  }
+
   return (
     <>
       <Router>
@@ -31,7 +40,7 @@ export default function Home() {
                 <Pull_blockchain />
               </>
             }
-          />{" "}
+          />
         </Routes>
       </Router>
     </>

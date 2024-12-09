@@ -23,7 +23,7 @@ export default function Index() {
       <div
         className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center relative group"
         style={{
-          backgroundImage: 'url("/tu-segunda-imagen.jpg")',
+          backgroundImage: 'url("https://r4.wallpaperflare.com/wallpaper/96/377/232/anime-everlasting-summer-hospital-original-anime-wallpaper-490058ada11a4dab56a7b8ff1001b6fd.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-40 transition-all duration-500"></div>
