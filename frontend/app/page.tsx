@@ -2,37 +2,38 @@
 
 import { useRkAccountModal } from "@/lib/rainbowkit";
 import { useAccount, useReadContract } from "wagmi";
-import { parseAbi } from "viem";
-import Get_input from "./form/Get_Input";
-import Send from "./input/input";
-import Index from "./principal/Index";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navigation from "./Navigation";
+import Index from "./principal/Index";
 import About_us from "./about_us/about_us";
 import BoxForm from "./form/box_form";
-
-const ADDRESS = "0x9bd5ffc78ac793f243777f00a1f3990562269fc0";
-
-const ABI = parseAbi(["function saludame() public view returns (string)"]);
+import Get_input from "./form/Get_Input";
+import Pull_blockchain from "./form/Pull_blockchain";
 
 export default function Home() {
-  const result = useReadContract({
-    address: ADDRESS,
-    functionName: "saludame",
-    abi: ABI,
-  });
-
+  const { openAccountModal } = useRkAccountModal();
+  const account = useAccount();
   // console.debug({result})
-  
-  const { openAccountModal } = useRkAccountModal()
-  const account = useAccount()
-
   // console.log(account)
   return (
     <>
-      {<Navigation />}
-      {<Index />}
-      {/* {<About_us />} */}
-      {/* {<BoxForm />} */}
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about-us" element={<About_us />} />
+          <Route path="/form" element={<BoxForm />} />
+          <Route
+            path="/form/input"
+            element={
+              <>
+                <Get_input />
+                <Pull_blockchain />
+              </>
+            }
+          />{" "}
+        </Routes>
+      </Router>
     </>
   );
 }

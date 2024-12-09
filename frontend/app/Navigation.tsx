@@ -1,7 +1,7 @@
-// Navigation.tsx
-"use client"
+"use client";
 
-import ConnectButton from "./ConnectButton"; // Importamos el botón
+import { Link } from "react-router-dom";
+import ConnectButton from "./ConnectButton";
 
 export default function Navigation() {
   return (
@@ -9,21 +9,43 @@ export default function Navigation() {
       {/* Barra de navegación */}
       <h1 className="text-lg font-light tracking-wide text-black">MedRecord</h1>
 
-      {/* Barra de navegación con botones */}
+      {/* Barra de navegación con enlaces */}
       <ul className="flex items-center space-x-4">
         <li>
-          <button className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600">
+          <Link
+            to="/"
+            className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
+          >
             Home
-          </button>
+          </Link>
         </li>
         <li>
-          <button className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600">
+          <Link
+            to="/about-us"
+            className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
+          >
             About Us
-          </button>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/form"
+            className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
+          >
+            Form
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/form/input"
+            className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
+          >
+            Input
+          </Link>
         </li>
         {/* El botón Sign In es el último */}
         <li>
-          <ConnectButton /> {/* El único botón Sign In */}
+          <ConnectButton />
         </li>
       </ul>
     </nav>
