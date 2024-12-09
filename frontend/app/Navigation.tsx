@@ -16,7 +16,7 @@ export default function Navigation() {
             to="/"
             className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
           >
-            Home
+            Inicio
           </Link>
         </li>
         <li>
@@ -24,7 +24,7 @@ export default function Navigation() {
             to="/about-us"
             className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
           >
-            About Us
+            Sobre nostros
           </Link>
         </li>
         <li>
@@ -32,7 +32,7 @@ export default function Navigation() {
             to="/form"
             className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
           >
-            Form
+            Mi Record
           </Link>
         </li>
         <li>
@@ -40,7 +40,7 @@ export default function Navigation() {
             to="/form/input"
             className="px-4 py-1 text-sm text-black rounded-lg transition-all hover:bg-gray-600"
           >
-            Input
+            Registrar
           </Link>
         </li>
         {/* El botón Sign In es el último */}

@@ -12,29 +12,22 @@ const ABI = parseAbi([
 ]);
 
 export default function Pull_blockchain() {
-    
-    const CONTRACT_ADDRESS = "0x789f1ab5265db940a75d8b41caf83d8a161e3ebc";
-    
-    const read_contract =  useReadContract({
-        abi: ABI,
-        address: CONTRACT_ADDRESS,
-        functionName: "pull_record",
-      });
+  const CONTRACT_ADDRESS = "0x789f1ab5265db940a75d8b41caf83d8a161e3ebc";
 
+  const read_contract = useReadContract({
+    abi: ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "pull_record",
+  });
 
-const result = read_contract?.data ? hexToString(read_contract.data) : "Cargando..."
+  const result = read_contract?.data
+    ? hexToString(read_contract.data)
+    : "Cargando...";
 
-  console.log(read_contract)
+  console.log(read_contract);
   return (
-    <>
-      <div>
-        <h1>
-            Result
-        </h1>
-        <p>
-            {result}
-        </p>
-      </div>
-    </>
+    <div>
+      <p>{result}</p>
+    </div>
   );
 }

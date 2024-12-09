@@ -24,12 +24,12 @@ export default function Get_input() {
   });
   const [input, setInput] = useState("");
 
-//   const handleChange = (
-//     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-//   ) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
+  //   const handleChange = (
+  //     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  //   ) => {
+  //     const { name, value } = e.target;
+  //     setFormData({ ...formData, [name]: value });
+  //   };
 
   const escribirEnBlockchain = () => {
     // const inputData = `${formData.name}|${formData.age}|${formData.gender}|${formData.bloodType}|${formData.medications}|${formData.allergies}`;
@@ -60,6 +60,9 @@ export default function Get_input() {
             name="name"
             // value={formData.name}
             // onChange={handleChange}
+            onChange={(event_botoncito) => {
+              setInput(event_botoncito.target.value);
+            }}
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
           />
         </div>
@@ -148,9 +151,7 @@ export default function Get_input() {
             id="allergies"
             name="allergies"
             // value={formData.allergies}
-            onChange={(event_botoncito) => {
-              setInput(event_botoncito.target.value);
-            }}
+            // onChange={handleChange}
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
           />
         </div>

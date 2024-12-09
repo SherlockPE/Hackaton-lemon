@@ -2,21 +2,22 @@ import React from "react";
 import Image from "next/image";
 import cardHeaderImage from "@/assets/abstract-blur-empty-green-gradient-studio-well-use-as-backgroundwebsite-templateframebusiness-report.jpg";
 import profilePic from "@/assets/33e4425f-3a3f-466d-93d2-78b807429841.jpg";
-import { BsCapsulePill, } from 'react-icons/bs';
+import { BsCapsulePill } from "react-icons/bs";
 import { FaFileWaveform } from "react-icons/fa6";
+import Pull_blockchain from "./Pull_blockchain";
 
 export const BoxForm = () => {
   const healthData = [
     {
-        followers: "TODO",
+      followers: "TODO",
       name: "Alergias",
     },
     {
-        icon: <FaFileWaveform />,
+      icon: <FaFileWaveform />,
       name: "Historial",
     },
     {
-        icon: <BsCapsulePill />,
+      icon: <BsCapsulePill />,
       name: "Medicación",
     },
   ];
@@ -39,7 +40,7 @@ export const BoxForm = () => {
         </div>
         <div className="flex flex-col justify-center items-center font-extrabold text-2xl">
           <div className="gap-4">
-            John Doe <span className="font-light text-gray-400">A+</span>
+            <Pull_blockchain /> <span className="font-light text-gray-400">A+</span>
           </div>
           <div className="text-base font-normal text-gray-400 track mt-2">
             01/01/1982
