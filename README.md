@@ -4,7 +4,9 @@
 MedRecords es una plataforma web basada en tecnología blockchain que permite a las personas conectar su identidad con su historial clínico. Con Med-Records, la información médica estará disponible de manera segura y accesible en cualquier parte del mundo, especialmente útil en casos de emergencia o al viajar.
 
 
-# Puedes visualizar nuestra página a través de este [enlace](https://medrecords.vercel.app/)
+# Puedes visualizar nuestro proyecto a través de los siguientes enlaces:
+- [Pagina Web de MedRecords](https://medrecords.vercel.app/)
+- [Video Presentacion de MedRecords](https://drive.google.com/file/d/1EnQRRUjHy9yBwgPiMS0bmZBp182dW_hX/view?t=280)
 
 ---
 
